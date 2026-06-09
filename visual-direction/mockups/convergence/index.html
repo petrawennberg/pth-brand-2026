@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convergence &middot; Path to Health &mdash; warm ground, light spectrum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Warm ground — Cape Bright base, kept light-sensitive-safe (no burning white, no pure black) */
+    --cream: #FAF6EC;
+    --cream-deep: #F2EBDB;
+    --cream-rule: #E7DFCC;
+    --ink: #3A3327;
+    --muted: #5E564A;
+
+    /* The spectrum — Cape Town sunset pigments, NOT screen rainbow.
+       Reads blue -> sage -> gold -> coral -> rose. This is Q24's
+       "light spectrum / primary colours combine into infinite potential",
+       rendered in earthen, saturated values (no pastels). */
+    --mountain: #6A89A8;       /* Cape mountain blue — Method / quiet authority */
+    --mountain-deep: #34495E;
+    --sage: #8FA487;           /* restio / fynbos green */
+    --gold: #E5B742;           /* marigold — Q24 "gold for vitality" */
+    --coral: #C97A52;          /* terracotta-coral — apothecary warmth */
+    --rose: #C9697A;           /* Raoul's pink — cancer care register */
+    --rose-soft: #EBD3D6;      /* blush ground tint */
+    --terracotta-soft: #E4BBA0; /* soft terracotta ground — lead programme */
+    --rose-deep: #9C3A3C;       /* deep brick-rose — reads on the terracotta ground */
+
+    /* vivid spectrum — same Cape-sunset family, more saturated, for the
+       headline gradient and the phase bars where the earthen tones go flat */
+    --v-blue: #2E73BE;
+    --v-sage: #4F9E4A;
+    --v-gold: #F2A60E;
+    --v-coral: #DE5A2A;
+    --v-rose: #D8345F;
+
+    --serif: 'Fraunces', ui-serif, Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --maxw: 1320px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
+  body {
+    font-family: var(--sans); font-weight: 400;
+    background: var(--cream); color: var(--ink);
+    -webkit-font-smoothing: antialiased; line-height: 1.65;
+  }
+  a { color: inherit; }
+
+  /* ---- the spectrum hairline: one device used everywhere a rule is needed ---- */
+  .spectrum-rule {
+    height: 2px; border: 0; border-radius: 2px;
+    background: linear-gradient(90deg,
+      var(--mountain) 0%, var(--sage) 27%, var(--gold) 50%,
+      var(--coral) 73%, var(--rose) 100%);
+  }
+
+  /* ---- direction banner (team-review only; strip before staging) ---- */
+  .banner {
+    background: var(--ink); color: var(--cream);
+    padding: 10px 24px; display: flex; justify-content: space-between;
+    align-items: center; font-size: 11px; letter-spacing: 0.04em; gap: 16px; flex-wrap: wrap;
+  }
+  .banner em { font-style: italic; opacity: 0.72; }
+  .banner .swatches { display: flex; gap: 5px; align-items: center; }
+  .banner .sw { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
+
+  header {
+    position: relative; z-index: 2;
+    padding: 30px 48px; display: flex; justify-content: space-between;
+    align-items: center; max-width: var(--maxw); margin: 0 auto;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-mark { width: 46px; height: auto; flex: none; }
+  .logo-word {
+    font-family: var(--serif); font-weight: 400; font-size: 21px;
+    letter-spacing: -0.01em; color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+  }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav a { font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; }
+  nav a:hover { color: var(--coral); }
+  .book-cta { padding: 10px 22px; border: 1px solid var(--ink); border-radius: 100px; font-weight: 500; transition: 0.2s; }
+  .book-cta:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------------- HERO ---------------- */
+  .hero {
+    position: relative;
+    padding: 64px 48px 64px; max-width: 1080px; margin: 0 auto; text-align: center;
+  }
+  /* soft spectrum glow — adds weight and warmth behind the hero */
+  .hero::before {
+    content: ""; position: absolute; top: -150px; bottom: 0; left: 50%; width: 100vw;
+    transform: translateX(-50%); z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(60% 70% at 28% 28%, rgba(201,105,122,0.20), transparent 60%),
+      radial-gradient(55% 65% at 78% 30%, rgba(106,137,168,0.18), transparent 58%),
+      radial-gradient(70% 80% at 50% 105%, rgba(229,183,66,0.18), transparent 60%);
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-text { max-width: 880px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--coral); margin-bottom: 28px; font-weight: 600;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(52px, 6.4vw, 104px); line-height: 0.98;
+    letter-spacing: -0.03em; color: var(--ink); margin-bottom: 28px;
+    font-variation-settings: "opsz" 144, "SOFT" 40, "WONK" 0;
+  }
+  /* full-bleed hero image */
+  .hero-image-full {
+    width: 100%; height: clamp(320px, 52vh, 560px);
+    background-color: var(--cream-deep);
+    background-image:
+      url("../../images/path-to-health/PathtoHealth-00313.jpg"),
+      url("../../references/photos/Path-To-Healing-WebReady-23.JPG");
+    background-size: cover; background-position: center 46%;
+    filter: saturate(1.28) contrast(1.08) brightness(1.04);
+  }
+  /* the spectral word — color living in the type, like the book covers the team loved */
+  .spectral {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    background: linear-gradient(95deg,
+      var(--v-blue) 0%, var(--v-sage) 24%, var(--v-gold) 50%,
+      var(--v-coral) 74%, var(--v-rose) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  .hero p {
+    font-size: 18px; line-height: 1.7; color: var(--muted);
+    max-width: 46ch; margin: 0 auto 34px; font-weight: 400;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .cta-primary {
+    padding: 14px 28px; background: var(--ink); color: var(--cream);
+    border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.2s;
+  }
+  .cta-primary:hover { background: var(--coral); }
+  .cta-secondary {
+    padding: 14px 28px; background: transparent; color: var(--ink);
+    border: 1px solid var(--ink); border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.2s;
+  }
+  .cta-secondary:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------------- TRUST STRIP ---------------- */
+  .trust { padding: 60px 48px 8px; max-width: 940px; margin: 0 auto; text-align: center; }
+  .trust p {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 27px; line-height: 1.45; color: var(--muted); letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 100, "SOFT" 100;
+  }
+  .rule-wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 48px; }
+
+  /* ---------------- THREE WAYS IN ---------------- */
+  .audience { max-width: var(--maxw); margin: 0 auto; padding: 40px 48px 96px; display: grid; grid-template-columns: 4fr 8fr; gap: 64px; }
+  .audience-side h2 {
+    font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1.05;
+    letter-spacing: -0.02em; color: var(--ink); margin-bottom: 16px;
+    font-variation-settings: "opsz" 144, "SOFT" 60;
+  }
+  /* emphasis words — single warm accent (gradient is hero-only) */
+  .audience-side h2 em { font-style: italic; color: var(--coral); }
+  .audience-side p { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 32ch; }
+  .audience-list { display: flex; flex-direction: column; }
+  .audience-item {
+    padding: 30px 0; border-top: 1px solid var(--cream-rule);
+    display: grid; grid-template-columns: 36px 1fr auto; gap: 28px; align-items: center;
+    text-decoration: none; color: var(--ink); transition: padding 0.2s;
+  }
+  .audience-item:last-child { border-bottom: 1px solid var(--cream-rule); }
+  .audience-item:hover { padding-left: 12px; }
+  .audience-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .audience-content h3 {
+    font-family: var(--serif); font-weight: 400; font-size: 27px; line-height: 1.15;
+    color: var(--ink); margin-bottom: 5px; font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .audience-content p { font-size: 14px; color: var(--muted); max-width: 50ch; }
+  .audience-arrow { font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--coral); }
+
+  /* ---------------- CANCER (lead programme) — rose ground, Raoul's cancer-care colour ---------------- */
+  .cancer { background: linear-gradient(158deg, #F1D2BD 0%, #E4BBA0 52%, #CB9C7D 100%); overflow: hidden; }
+  .cancer-grid { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; min-height: 78vh; }
+  .cancer-image {
+    background-color: var(--cream-deep);
+    background-image:
+      url("../../images/path-to-health/432ECC12-A047-4B6F-BEA5-2381FB4D3978_1_105_c.jpeg"),
+      url("../../references/photos/Path-To-Healing-WebReady-02.JPG");
+    background-size: cover; background-position: center; filter: saturate(1.28) contrast(1.08) brightness(1.04);
+  }
+  .cancer-text { padding: 92px 64px; display: flex; flex-direction: column; justify-content: center; max-width: 620px; }
+  .cancer-eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-deep); margin-bottom: 22px; font-weight: 600; }
+  .cancer h2 {
+    font-family: var(--serif); font-weight: 300; font-size: clamp(38px, 4.4vw, 64px);
+    line-height: 1.0; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 26px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .cancer h2 em { font-style: italic; color: var(--rose-deep); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+  .cancer p { font-size: 17px; line-height: 1.7; color: var(--ink); opacity: 0.9; margin-bottom: 28px; max-width: 42ch; font-weight: 400; }
+  .cancer .cta { display: inline-block; padding: 14px 28px; background: var(--ink); color: var(--cream); border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; align-self: flex-start; transition: 0.2s; }
+  .cancer .cta:hover { background: var(--rose); }
+
+  /* phase ribbon — five phases as five spectrum stops */
+  /* spectrum line — glowing gradient core + gradient outline, echoing the PATH Method circles */
+  .phase-bar { display: block; width: 100%; max-width: 440px; height: auto; margin-bottom: 34px; }
+
+  /* ---------------- TREATMENTS ---------------- */
+  .treatments { max-width: var(--maxw); margin: 0 auto; padding: 112px 48px; }
+  .treatments-head { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-bottom: 56px; align-items: end; }
+  .treatments-head h2 {
+    font-family: var(--serif); font-weight: 300; font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.0; letter-spacing: -0.025em; color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .treatments-head h2 em { font-style: italic; color: var(--coral); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+  .treatments-head p { font-size: 17px; line-height: 1.7; color: var(--muted); max-width: 40ch; font-weight: 400; }
+  .treatments-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
+  .t-tile {
+    background: var(--cream-deep); padding: 34px 30px; border-radius: 10px;
+    text-decoration: none; color: var(--ink); transition: transform 0.2s; position: relative;
+    border-top: 3px solid transparent;
+  }
+  .t-tile:hover { transform: translateY(-3px); }
+  .t-tile h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.15; margin-bottom: 8px; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .t-tile p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .t-tile-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
+  .t-tile.large { grid-column: span 7; padding: 46px; min-height: 270px; }
+  .t-tile.medium { grid-column: span 5; }
+  .t-tile.small { grid-column: span 4; }
+  .t-tile.large h3 { font-size: 38px; }
+  /* each tile carries one spectrum stop — colour across the system, disciplined */
+  .accent-rose { border-top-color: var(--rose); } .accent-rose .t-tile-eyebrow { color: var(--rose); }
+  .accent-coral { border-top-color: var(--coral); } .accent-coral .t-tile-eyebrow { color: var(--coral); }
+  .accent-gold { border-top-color: var(--gold); } .accent-gold .t-tile-eyebrow { color: #B8862A; }
+  .accent-sage { border-top-color: var(--sage); } .accent-sage .t-tile-eyebrow { color: #6E8367; }
+  .accent-mountain { border-top-color: var(--mountain); } .accent-mountain .t-tile-eyebrow { color: var(--mountain-deep); }
+  .treatments-all { margin-top: 40px; display: flex; justify-content: center; }
+  .treatments-all-link {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 15px 34px; border: 1px solid var(--ink); border-radius: 100px;
+    text-decoration: none; color: var(--ink); font-weight: 500; font-size: 14px;
+    letter-spacing: 0.01em; transition: 0.2s;
+  }
+  .treatments-all-link:hover { background: var(--ink); color: var(--cream); }
+  .treatments-all-link span { transition: transform 0.2s; }
+  .treatments-all-link:hover span { transform: translateX(4px); }
+
+  /* ---------------- EXPERIENCE ---------------- */
+  .experience { max-width: var(--maxw); margin: 0 auto; padding: 16px 48px 112px; display: grid; grid-template-columns: 7fr 5fr; gap: 80px; align-items: center; }
+  .experience-image {
+    aspect-ratio: 4/3; border-radius: 10px;
+    background-color: var(--cream-deep);
+    background-image:
+      url("../../images/path-to-health/PathtoHealth-00396.jpg"),
+      url("../../references/photos/Path-To-Healing-WebReady-14.JPG");
+    background-size: cover; background-position: center; filter: saturate(1.06) brightness(1.02);
+  }
+  .experience-text h2 {
+    font-family: var(--serif); font-weight: 300; font-size: clamp(34px, 4vw, 58px);
+    line-height: 1.05; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 22px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .experience-text h2 em { font-style: italic; color: var(--sage); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+  .experience-text p { font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 24px; max-width: 40ch; }
+  .experience-text a { font-size: 14px; color: var(--coral); text-decoration: none; font-weight: 500; }
+
+  /* ---------------- METHOD strip — cooler, contained (Method register) ---------------- */
+  .method { background: radial-gradient(95% 130% at 78% 36%, #496A86 0%, #36495C 52%, #232F3D 100%); color: var(--cream); }
+  .method-inner { max-width: var(--maxw); margin: 0 auto; padding: 104px 48px; display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center; }
+  .method-eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; font-weight: 600; }
+  .method h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 22px; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .method h2 em { font-style: italic; color: var(--gold); }
+  .method p { font-size: 17px; line-height: 1.7; opacity: 0.94; max-width: 46ch; font-weight: 400; margin-bottom: 28px; }
+  .method .cta { display: inline-block; padding: 14px 28px; background: var(--cream); color: var(--mountain-deep); border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; }
+  .method-circles { display: grid; place-items: start center; }
+
+  /* ---------------- QUOTE ---------------- */
+  .quote { background: linear-gradient(160deg, #FBF6EC 0%, #F1EAD9 52%, #E3D8C0 100%); padding: 112px 48px; }
+  .quote-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 76px; align-items: center; }
+  .quote-image {
+    aspect-ratio: 3/4; border-radius: 10px;
+    background-image:
+      url("../../images/dr-raoul/PathtoHealth-00357.jpg"),
+      url("../../references/photos/Path-To-Healing-WebReady-39.JPG");
+    background-size: cover; background-position: center 32%; filter: saturate(1.05) brightness(1.01);
+  }
+  .quote blockquote {
+    font-family: var(--serif); font-weight: 300; font-style: italic;
+    font-size: clamp(34px, 4.4vw, 54px); line-height: 1.18; color: var(--ink);
+    letter-spacing: -0.015em; max-width: 18ch; margin-bottom: 30px;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  }
+  .quote cite { font-size: 12px; color: var(--muted); font-style: normal; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+
+  /* ---------------- FOOTER ---------------- */
+  footer { max-width: var(--maxw); margin: 0 auto; padding: 76px 48px 32px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 44px; border-bottom: 1px solid var(--cream-rule); }
+  .footer-brand { display: flex; align-items: center; gap: 11px; margin-bottom: 12px; }
+  .footer-brand .logo-word { font-size: 24px; }
+  .footer-tag { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 30ch; }
+  .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .footer-col a:hover { color: var(--coral); }
+  .footer-bottom { display: flex; justify-content: space-between; padding-top: 22px; font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 900px) {
+    .hero, .audience, .cancer-grid, .treatments-head, .experience, .method-inner, .quote-inner, .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-motif { max-width: 420px; margin: 0 auto; }
+    .t-tile.large, .t-tile.medium, .t-tile.small { grid-column: span 12; }
+    header { padding: 24px; flex-direction: column; gap: 18px; }
+    nav ul { flex-wrap: wrap; gap: 18px; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 90" aria-hidden="true">
+      <circle cx="32" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.4"/>
+      <circle cx="68" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.4"/>
+      <path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" fill="none" stroke="var(--ink)" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+    <span class="logo-word">Path to Health</span>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Treatments</a></li>
+      <li><a href="#">PATH Method</a></li>
+      <li><a href="#">Learn</a></li>
+      <li><a href="#" class="book-cta">Book appointment</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Whole-person medicine &middot; Cape Town</div>
+    <h1>Body and mind, <span class="spectral">as one living reality.</span></h1>
+    <p>An integrative medical practice where medicine and psychotherapy work as one &mdash; fifty years of clinical depth, practised through the body&rsquo;s own intelligence.</p>
+    <div class="hero-ctas">
+      <a href="#" class="cta-primary">Book appointment</a>
+      <a href="#" class="cta-secondary">Explore treatments</a>
+    </div>
+  </div>
+</section>
+
+<div class="hero-image-full"></div>
+
+<section class="trust">
+  <p>Fifty years of integrative medical practice. Swiss and Anthroposophic-trained. Body and mind under one roof, in Cape Town.</p>
+</section>
+
+<div class="rule-wrap"><hr class="spectrum-rule"></div>
+
+<section class="audience">
+  <div class="audience-side">
+    <h2>Three ways <em>in.</em></h2>
+    <p>Each path leads to the same Centre &mdash; but the questions you bring shape where to start.</p>
+  </div>
+  <div class="audience-list">
+    <a href="#" class="audience-item">
+      <span class="audience-dot" style="background:var(--rose)"></span>
+      <div class="audience-content">
+        <h3>Patients &amp; families</h3>
+        <p>Chronic illness, a new diagnosis, integrative care.</p>
+      </div>
+      <div class="audience-arrow">&rarr;</div>
+    </a>
+    <a href="#" class="audience-item">
+      <span class="audience-dot" style="background:var(--gold)"></span>
+      <div class="audience-content">
+        <h3>Practitioners &amp; referrers</h3>
+        <p>Doctors, therapists, integrative health colleagues.</p>
+      </div>
+      <div class="audience-arrow">&rarr;</div>
+    </a>
+    <a href="#" class="audience-item">
+      <span class="audience-dot" style="background:var(--mountain)"></span>
+      <div class="audience-content">
+        <h3>International visitors</h3>
+        <p>Plan a visit combining treatment and Cape Town.</p>
+      </div>
+      <div class="audience-arrow">&rarr;</div>
+    </a>
+  </div>
+</section>
+
+<section class="cancer">
+  <div class="cancer-grid">
+    <div class="cancer-image"></div>
+    <div class="cancer-text">
+      <div class="cancer-eyebrow">Lead programme</div>
+      <h2>Forty-five years of <em>integrative cancer care.</em></h2>
+      <svg class="phase-bar" viewBox="0 0 440 8" width="100%" aria-hidden="true">
+        <defs>
+          <linearGradient id="phaseLight" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#DCEBFB"/>
+            <stop offset="26%" stop-color="#E4F1DD"/>
+            <stop offset="50%" stop-color="#FBF2D8"/>
+            <stop offset="74%" stop-color="#FBE7D8"/>
+            <stop offset="100%" stop-color="#FBE0E5"/>
+          </linearGradient>
+        </defs>
+        <!-- thin light line with a faint internal gradation -->
+        <rect x="0" y="2.5" width="440" height="3" rx="1.5" fill="url(#phaseLight)"/>
+      </svg>
+      <p>Five phases of therapy &mdash; foundational, consultative, treatment, maintenance, transformative &mdash; combining hyperthermia, mistletoe, IV vitamin C, ozone, and the PATH Method.</p>
+      <a href="#" class="cta">Inside the programme &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="treatments">
+  <div class="treatments-head">
+    <h2>What else <em>we treat.</em></h2>
+    <p>The Centre treats more than cancer &mdash; chronic illness, complex pain, immune and metabolic disorders, autoimmune disease, and the psychological roots that often underlie them all.</p>
+  </div>
+  <div class="treatments-grid">
+    <a href="#" class="t-tile large accent-rose">
+      <div class="t-tile-eyebrow">Most asked about</div>
+      <h3>Chronic &amp; complex conditions</h3>
+      <p>Long COVID, chronic fatigue, autoimmune disorders, complex undiagnosed cases &mdash; the patients other doctors couldn&rsquo;t place.</p>
+    </a>
+    <a href="#" class="t-tile medium accent-coral">
+      <div class="t-tile-eyebrow">Restoration</div>
+      <h3>Pain &amp; regeneration</h3>
+      <p>PRP, stem cell, tendon and cartilage repair, prolozone.</p>
+    </a>
+    <a href="#" class="t-tile small accent-gold">
+      <div class="t-tile-eyebrow">Therapies</div>
+      <h3>IV nutrition</h3>
+      <p>High-dose vitamin C, NAD, peptides, therapeutic venesection.</p>
+    </a>
+    <a href="#" class="t-tile small accent-sage">
+      <div class="t-tile-eyebrow">Therapies</div>
+      <h3>Heckel hyperthermia</h3>
+      <p>Full-body Heckel hyperthermia for ATP and immune support.</p>
+    </a>
+    <a href="#" class="t-tile small accent-mountain">
+      <div class="t-tile-eyebrow">Coming soon</div>
+      <h3>Inuspheresis</h3>
+      <p>Swiss blood-detox technology &mdash; the seventh country worldwide.</p>
+    </a>
+    <a href="#" class="t-tile medium accent-rose">
+      <div class="t-tile-eyebrow">Mind-body</div>
+      <h3>Psychotherapy &amp; the PATH Method</h3>
+      <p>Integrative psychotherapy and the PATH Method as a clinical tool.</p>
+    </a>
+  </div>
+  <div class="treatments-all">
+    <a href="#" class="treatments-all-link">Explore all treatments <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<div class="rule-wrap"><hr class="spectrum-rule"></div>
+
+<section class="experience">
+  <div class="experience-image"></div>
+  <div class="experience-text">
+    <h2>Wood walls, curved windows, <em>nature in the room.</em></h2>
+    <p>The apothecary holds rows of raw botanicals from the Parcival pharmacy, hand-compounded remedies, and a permaculture garden that supplies the kitchen and the dispensary alike.</p>
+    <a href="#">Take a tour of the Centre &rarr;</a>
+  </div>
+</section>
+
+<section class="method">
+  <div class="method-inner">
+    <div>
+      <div class="method-eyebrow">PATH Method</div>
+      <h2>The inner work, <em>made teachable.</em></h2>
+      <p>A twelve-phase choreography for the psyche &mdash; usable on your own or with a practitioner, reaching depths of nervous-system regulation most approaches never touch.</p>
+      <a href="#" class="cta">Discover the Method &rarr;</a>
+    </div>
+    <div class="method-circles">
+      <!-- the heart mark: warm sunset gradient fills (Gradient · warm), heart knocked out -->
+      <svg viewBox="-26 -28 152 142" width="94%" style="max-width:380px; overflow:visible" aria-hidden="true">
+        <defs>
+          <linearGradient id="sgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9DB8"/><stop offset="100%" stop-color="#FFC089"/></linearGradient>
+          <linearGradient id="sgB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFE79A"/><stop offset="100%" stop-color="#ABDF99"/></linearGradient>
+          <linearGradient id="sgC" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#CBE6FF"/><stop offset="100%" stop-color="#DCCFFC"/></linearGradient>
+          <radialGradient id="hRose" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FF9DB0" stop-opacity="0.85"/><stop offset="100%" stop-color="#FF9DB0" stop-opacity="0"/></radialGradient>
+          <radialGradient id="hBlue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#8FC4FF" stop-opacity="0.85"/><stop offset="100%" stop-color="#8FC4FF" stop-opacity="0"/></radialGradient>
+          <radialGradient id="hGold" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFE382" stop-opacity="0.85"/><stop offset="100%" stop-color="#FFE382" stop-opacity="0"/></radialGradient>
+        </defs>
+        <!-- soft light circles behind: radial fade, kept inside the viewBox (no clip box, no blend) -->
+        <g>
+          <circle cx="32" cy="31" r="46" fill="url(#hRose)"/>
+          <circle cx="68" cy="31" r="46" fill="url(#hBlue)"/>
+          <circle cx="50" cy="55" r="46" fill="url(#hGold)"/>
+        </g>
+        <g fill="none" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+          <circle cx="32" cy="31" r="28" stroke="url(#sgA)"/>
+          <circle cx="68" cy="31" r="28" stroke="url(#sgB)"/>
+          <path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" stroke="url(#sgC)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="quote-inner">
+    <div class="quote-image"></div>
+    <div>
+      <blockquote>&ldquo;What is your wish? How would you like to position yourself?&rdquo;</blockquote>
+      <cite>Dr. Raoul Goldberg, founder</cite>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <span class="logo-word">Path to Health</span>
+      </div>
+      <p class="footer-tag">Integrative medicine, Anthroposophic lineage, Cape Town.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="#">New patient inquiry</a></li>
+        <li><a href="#">Refer a patient</a></li>
+        <li><a href="#">Plan a visit</a></li>
+        <li><a href="#">Book appointment</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">The Centre</a></li>
+        <li><a href="#">Dr. Raoul Goldberg</a></li>
+        <li><a href="#">Our Philosophy</a></li>
+        <li><a href="#">The Apothecary</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">PAIA Manual</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Path to Health Centre</span>
+    <span>Constantia &middot; Cape Town</span>
+  </div>
+</footer>
+
+</body>
+</html>

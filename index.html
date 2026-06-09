@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Path to Health &mdash; Brand Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF6EC;
+    --cream-deep: #F2EBDB;
+    --cream-rule: #E7DFCC;
+    --ink: #3A3327;
+    --muted: #5E564A;
+    --mountain: #6A89A8;
+    --mountain-deep: #34495E;
+    --sage: #8FA487;
+    --gold: #E5B742;
+    --coral: #C97A52;
+    --rose: #C9697A;
+    --rose-deep: #9C3A3C;
+    --terracotta-soft: #E4BBA0;
+    --v-blue: #2E73BE; --v-sage: #4F9E4A; --v-gold: #F2A60E; --v-coral: #DE5A2A; --v-rose: #D8345F;
+    --serif: 'Fraunces', ui-serif, Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --maxw: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; font-family: var(--sans); font-weight: 400; background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: var(--coral); }
+
+  .spectrum-rule { height: 2px; border: 0; border-radius: 2px; background: linear-gradient(90deg, var(--mountain) 0%, var(--sage) 27%, var(--gold) 50%, var(--coral) 73%, var(--rose) 100%); }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 22px; }
+  .spectral { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; background: linear-gradient(95deg, var(--v-blue) 0%, var(--v-sage) 24%, var(--v-gold) 50%, var(--v-coral) 74%, var(--v-rose) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+  /* COVER */
+  .cover { position: relative; padding: 96px 40px 72px; text-align: center; overflow: hidden; }
+  .cover::before { content: ""; position: absolute; top: -120px; left: 50%; width: 100vw; transform: translateX(-50%); height: 520px; z-index: 0; pointer-events: none;
+    background: radial-gradient(60% 70% at 28% 28%, rgba(201,105,122,0.18), transparent 60%), radial-gradient(55% 65% at 78% 30%, rgba(106,137,168,0.16), transparent 58%), radial-gradient(70% 80% at 50% 108%, rgba(229,183,66,0.16), transparent 60%); }
+  .cover > * { position: relative; z-index: 1; }
+  .cover .mark { width: 80px; height: auto; margin: 0 auto 30px; display: block; }
+  .cover h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(44px, 6vw, 86px); line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 24px; font-variation-settings: "opsz" 144, "SOFT" 40; }
+  .cover .sub { font-size: 19px; color: var(--muted); max-width: 50ch; margin: 0 auto 36px; }
+  .cover .meta { font-size: 13px; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+  .cover-image { width: 100%; height: clamp(280px, 44vh, 440px); margin-top: 56px;
+    background-image: url("visual-direction/images/path-to-health/PathtoHealth-00313.jpg"), url("visual-direction/references/photos/Path-To-Healing-WebReady-23.JPG");
+    background-size: cover; background-position: center 46%; filter: saturate(1.28) contrast(1.08) brightness(1.04); }
+
+  /* SECTION */
+  section { padding: 80px 0; }
+  section.tint { background: linear-gradient(160deg, #F6F0E4 0%, #F1EAD9 55%, #ECE3D1 100%); }
+  .section-head { max-width: 64ch; margin-bottom: 44px; }
+  .section-head h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(32px, 4.4vw, 52px); line-height: 1.04; letter-spacing: -0.025em; margin-bottom: 18px; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .section-head p { font-size: 18px; color: var(--muted); }
+  h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 8px; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  h4 { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 12px; }
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; color: var(--ink); }
+  em.k { font-style: italic; color: var(--coral); font-weight: 500; }
+
+  .lead { font-family: var(--serif); font-weight: 300; font-size: clamp(24px, 3vw, 34px); line-height: 1.35; letter-spacing: -0.015em; color: var(--ink); max-width: 24ch; font-variation-settings: "opsz" 144, "SOFT" 60; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: var(--cream); border: 1px solid var(--cream-rule); border-radius: 12px; padding: 30px; }
+  section.tint .card { background: rgba(255,255,255,0.45); }
+  .card.accent { border-top: 3px solid var(--coral); }
+  .card p { font-size: 15px; color: var(--muted); }
+  .card .tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 14px; display: block; }
+
+  ul.clean { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+  ul.clean li { position: relative; padding-left: 22px; font-size: 15px; color: var(--muted); }
+  ul.clean li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
+  ul.clean.rose li::before { background: var(--rose-deep); }
+  ul.clean.sage li::before { background: var(--sage); }
+
+  blockquote { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.38; letter-spacing: -0.01em; color: var(--ink); max-width: 26ch; font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+  blockquote cite { display: block; font-family: var(--sans); font-style: normal; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 20px; font-weight: 500; }
+
+  /* dark panel */
+  .dark { background: radial-gradient(95% 130% at 78% 36%, #496A86 0%, #36495C 52%, #232F3D 100%); color: var(--cream); }
+  .dark h2, .dark h3 { color: var(--cream); }
+  .dark .section-head p, .dark p { color: rgba(250,246,236,0.85); }
+  .dark h4 { color: var(--gold); }
+  .dark .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+  .dark .card p { color: rgba(250,246,236,0.82); }
+  .dark ul.clean li { color: rgba(250,246,236,0.82); }
+
+  /* two-col text rows */
+  .row { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 26px 0; border-top: 1px solid var(--cream-rule); }
+  .row:first-of-type { border-top: 0; }
+  .dark .row { border-color: rgba(255,255,255,0.14); }
+  .row .label { font-family: var(--serif); font-size: 22px; font-weight: 400; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .row .label .n { display: block; font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em; color: var(--coral); font-weight: 600; margin-bottom: 6px; }
+
+  /* palette swatches */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 14px; margin-top: 8px; }
+  .sw { border-radius: 10px; overflow: hidden; border: 1px solid var(--cream-rule); }
+  .sw .chip { height: 64px; }
+  .sw .lab { padding: 9px 12px; font-size: 11px; background: var(--cream); }
+  .sw .lab b { display: block; font-size: 12px; color: var(--ink); margin-bottom: 1px; letter-spacing: 0.02em; }
+  .sw .lab span { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .use-avoid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .use-avoid .col h4 { margin-bottom: 14px; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { font-size: 13px; padding: 6px 13px; border-radius: 100px; border: 1px solid var(--cream-rule); background: var(--cream); color: var(--ink); }
+  .pill.no { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--rose-deep); }
+
+  .twoent { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: center; }
+  .twoent .ent { background: var(--cream); border: 1px solid var(--cream-rule); border-radius: 14px; padding: 32px; }
+  .twoent .ent.method { border-top: 3px solid var(--mountain); }
+  .twoent .ent.centre { border-top: 3px solid var(--coral); }
+  .twoent .link { text-align: center; font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 14px; }
+
+  .founder { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; }
+  .founder-img { aspect-ratio: 4/5; border-radius: 12px; background-image: url("visual-direction/images/dr-raoul/PathtoHealth-00357.jpg"); background-size: cover; background-position: center 30%; filter: saturate(1.18) contrast(1.05); }
+
+  footer { padding: 64px 40px; text-align: center; color: var(--muted); font-size: 13px; }
+  footer .mark { width: 58px; height: auto; margin: 0 auto 20px; display: block; }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin-top: 30px; }
+  .toc a { font-size: 13px; color: var(--muted); text-decoration: none; font-weight: 500; }
+  .toc a:hover { color: var(--coral); }
+
+  @media (max-width: 820px) {
+    .grid2, .grid3, .use-avoid, .twoent, .founder, .row { grid-template-columns: 1fr; gap: 18px; }
+    .twoent .link { padding: 8px 0; }
+    section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- the threefold mark -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <radialGradient id="hR" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FF9DB0"/><stop offset="48%" stop-color="#E86E86" stop-opacity="0.62"/><stop offset="100%" stop-color="#E86E86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hB" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#8FC4FF"/><stop offset="48%" stop-color="#5E95E0" stop-opacity="0.62"/><stop offset="100%" stop-color="#5E95E0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFE382"/><stop offset="48%" stop-color="#F2C84B" stop-opacity="0.62"/><stop offset="100%" stop-color="#F2C84B" stop-opacity="0"/></radialGradient>
+</defs></svg>
+
+<header class="cover">
+  <svg class="mark" viewBox="0 0 100 90" aria-hidden="true">
+    <circle cx="32" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.2"/>
+    <circle cx="68" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.2"/>
+    <path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" fill="none" stroke="var(--ink)" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>
+  <div class="eyebrow" style="text-align:center">Brand Strategy &middot; Team Review</div>
+  <h1>Body and mind,<br><span style="font-style:italic; color:var(--coral); font-variation-settings:'opsz' 144,'SOFT' 100,'WONK' 1;">as one living reality.</span></h1>
+  <p class="sub">The strategic and visual foundation for Path to Health Centre, PATH Method, and Dr.&nbsp;Raoul Goldberg &mdash; one brand, two registers, fifty years of practice.</p>
+  <div class="meta">Cape Town &middot; June 2026 &middot; Prepared by Interactivism</div>
+  <nav class="toc">
+    <a href="#foundation">Foundation</a>
+    <a href="#position">Positioning</a>
+    <a href="#audience">Audiences</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#voice">Voice</a>
+    <a href="#visual">Visual Direction</a>
+    <a href="#status">Where We Stand</a>
+  </nav>
+  <div class="cover-image"></div>
+</header>
+
+<!-- THE ESSENCE -->
+<section>
+  <div class="wrap grid2" style="align-items:center; gap:56px">
+    <div>
+      <div class="eyebrow">The essence</div>
+      <p class="lead">Body and mind are not separate systems requiring separate disciplines. They are one living reality &mdash; and healing must meet them as such.</p>
+    </div>
+    <div>
+      <p>Path to Health is an integrative medical practice in Cape Town where <strong>medicine and psychotherapy work as one</strong>. For fifty years, Dr.&nbsp;Raoul Goldberg has combined European clinical precision with the quiet authority of earth-bound healing &mdash; hand-compounded botanicals, rhythmical preparation, nature in the room.</p>
+      <p>Most integrative clinics treat body and mind as adjacent specialisms. Path to Health treats them as a <em class="k">single field of inquiry</em> &mdash; using PATH Method as both a diagnostic and a therapeutic tool to find the often-hidden roots of physical symptoms, then engaging body and mind together to reach what conventional medicine alone cannot.</p>
+      <p style="font-size:15px; color:var(--muted)">An <strong>extension</strong> of Western medicine, in Steiner&rsquo;s terms &mdash; not an alternative.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="spectrum-rule"></div>
+
+<!-- FOUNDATION -->
+<section id="foundation">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">01 &middot; Brand Foundation</div>
+      <h2>Three entities, one lineage.</h2>
+      <p>A practitioner, a place, and a method &mdash; each with a distinct job, bound by a single philosophy of care.</p>
+    </div>
+    <div class="grid3">
+      <div class="card accent">
+        <span class="tag">The practitioner</span>
+        <h3>Dr.&nbsp;Raoul Goldberg</h3>
+        <p>Integrative physician &amp; psychotherapist, 50 years&rsquo; practice. Swiss- and German-trained, anthroposophic lineage, PhD. The lineage holder and author &mdash; whose work the brand must be able to outlive.</p>
+      </div>
+      <div class="card accent">
+        <span class="tag">The place</span>
+        <h3>Path to Health Centre</h3>
+        <p>Brick-and-mortar centre in Constantia, Cape Town. The validator and proving ground &mdash; where the Method is tried, proven, taught, and birthed. Medicine, dispensary, garden, and teaching under one roof.</p>
+      </div>
+      <div class="card accent">
+        <span class="tag">The method</span>
+        <h3>PATH Method</h3>
+        <p>A psycho-somatic, whole-person modality &mdash; the intellectual property. Both a diagnostic and a therapeutic tool. Designed to be teachable, licensable, and to endure beyond any one practitioner.</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:48px; gap:48px; align-items:start">
+      <div>
+        <h4>Core values</h4>
+        <ul class="clean">
+          <li>How can we help you help yourself?</li>
+          <li>Everyone is welcome.</li>
+          <li>A holistic view of the human being &mdash; body, soul, and spirit in relationship to the world.</li>
+          <li>Growth and creativity are part of healing.</li>
+          <li>I, You, We &mdash; participatory, relational, co-created.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>The promise to every patient</h4>
+        <blockquote>You will be seen, heard, and supported here. We wish to activate your capacity to heal yourself.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY / origin -->
+<section class="tint">
+  <div class="wrap founder">
+    <div class="founder-img" role="img" aria-label="Dr. Raoul Goldberg in his consulting room"></div>
+    <div>
+      <div class="eyebrow">The work, in one moment</div>
+      <blockquote style="max-width:34ch">&ldquo;I need to see what your inner physician looks like, so I can partner with that part of you.&rdquo;
+        <cite>Dr.&nbsp;Raoul Goldberg &middot; the opening of every consult</cite>
+      </blockquote>
+      <p style="margin-top:24px; max-width:46ch">The brand&rsquo;s spine is co-creation. Raoul finds the empowered self &mdash; the inner physician &mdash; and partners with it to design the journey. He moves the patient <strong>from victim to agency</strong>; from that presence, a different kind of medicine becomes possible. On the body side, he makes decisions <em>with</em> you. On the psyche side, PATH Method tends the hurt parts so the body need not recreate the illness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONING -->
+<section id="position">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">02 &middot; Positioning &amp; Differentiation</div>
+      <h2>The spine, and two wedges.</h2>
+      <p>The integration of medical treatment and psychotherapy under one roof is the brand&rsquo;s spine. Each entity then drives its own distinct wedge into the market.</p>
+    </div>
+
+    <div class="twoent" style="margin-bottom:48px">
+      <div class="ent centre">
+        <h4 style="color:var(--coral)">Centre wedge</h4>
+        <h3>Swiss medicine, Cape Town soul</h3>
+        <p style="color:var(--muted); font-size:15px; margin-top:8px">European integrative medicine at South African rates, with a combination of treatments not available together elsewhere &mdash; Heckel hyperthermia, Inuspheresis, ozone, IV nutrition, PRP/stem-cell, and integrative psychotherapy under one roof &mdash; inside a warm, wood-and-garden environment patients describe with one word: <em class="k">wow</em>.</p>
+      </div>
+      <div class="link">+</div>
+      <div class="ent method">
+        <h4 style="color:var(--mountain-deep)">Method wedge</h4>
+        <h3>No therapist required</h3>
+        <p style="color:var(--muted); font-size:15px; margin-top:8px">Once the choreography is learned, PATH Method is self-applicable &mdash; in the car, at home, in the supermarket &mdash; unlike IFS, Somatic Experiencing, or Hakomi, which need a facilitator in the room. And it goes further: beyond witnessing into <em class="k">resourcing the hurt one</em>, casting a remedial inner character that other modalities don&rsquo;t include.</p>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <h4>What sets us apart</h4>
+        <ul class="clean">
+          <li>Medicine + psychotherapy as a single field, not adjacent specialisms</li>
+          <li>PATH Method as both diagnostic and therapeutic</li>
+          <li>Old-school apothecary: precision-compounded botanicals</li>
+          <li>Unique treatment combination under one roof</li>
+          <li>A physical space that does the brand work already</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>The proof</h4>
+        <ul class="clean sage">
+          <li>50 years of integrated practice</li>
+          <li>100% referral &mdash; no marketing, fully booked</li>
+          <li>51-patient HRV trial measuring the Method in real time</li>
+          <li>PhD (2021) researching the Method on stress</li>
+          <li>10+ years teaching at Esalen and worldwide</li>
+          <li>Multigenerational families &mdash; three generations of patients</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>What we are <em style="font-style:italic; color:var(--rose-deep)">not</em></h4>
+        <ul class="clean rose">
+          <li>Not biohacking or &ldquo;bulletproof&rdquo; wellness culture</li>
+          <li>Not New Age, stone-circle, or &ldquo;ancient wisdom&rdquo;</li>
+          <li>Not cold European clinical-spa</li>
+          <li>Not a personality cult around Raoul</li>
+          <li>Not German New Medicine or pseudoscience</li>
+          <li>Not a digital product masquerading as a clinic</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; padding:28px 32px; background:var(--cream-deep); border-radius:12px">
+      <h4>On &ldquo;not yet published&rdquo;</h4>
+      <p style="color:var(--muted); max-width:74ch; font-size:15px">Many treatments aren&rsquo;t in major journals &mdash; not because they don&rsquo;t work, but because they&rsquo;re too affordable to fund trials. Mistletoe has been used 60+ years; red-light for 15; hyperthermia for 40. The framing for an international audience: these treatments are <strong>ahead of the curve and clinically demonstrated over decades</strong>, not risky &mdash; they simply haven&rsquo;t been studied enough to appear in journals. They pose no risk to patients.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="spectrum-rule"></div>
+
+<!-- AUDIENCES -->
+<section id="audience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">03 &middot; Audiences</div>
+      <h2>Two doors, many people.</h2>
+      <p>The Centre and the Method each gather distinct audiences. The website is the validator &mdash; not a lead-gen tool &mdash; giving global polish to credibility when people search after Oxford or the book.</p>
+    </div>
+
+    <div class="grid2" style="gap:40px; align-items:start">
+      <div>
+        <h4 style="color:var(--coral)">Path to Health Centre</h4>
+        <div class="card" style="margin-top:14px">
+          <ul class="clean">
+            <li><strong>Local, general health</strong> &mdash; multi-generational families. ~70% of business; the bread and butter.</li>
+            <li><strong>Chronically &amp; critically ill</strong> &mdash; MS, fibromyalgia, stage-4 cancer. Seeking integrative care and to be seen as a person, not a case.</li>
+            <li><strong>Swallows &amp; nomads</strong> &mdash; wealthy, often European, 5&ndash;6 months a year in Cape Town. Beauty, performance, longevity, Inuspheresis. <em>Aspirational, not yet actual.</em></li>
+            <li><strong>The apothecary</strong> &mdash; not an audience but a brand pillar: the bridge between earth-bound roots and cutting-edge medicine.</li>
+            <li><strong>Holistic beauty</strong> &mdash; the future, post-Raoul growth vector (Ivy&nbsp;Life).</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:var(--mountain-deep)">PATH Method</h4>
+        <div class="card" style="margin-top:14px; border-top:3px solid var(--mountain)">
+          <ul class="clean" style="--c:var(--mountain)">
+            <li><strong>Practitioners</strong> &mdash; MDs, psychologists, nurses, social workers. Need CEs, billing compatibility, evidence. Enter via pathmethod.com, validated by the Centre.</li>
+            <li><strong>Coaches &amp; HR</strong> &mdash; organisational and individual; conflict resolution, team dynamics.</li>
+            <li><strong>Well-being professionals</strong> &mdash; somatic therapists, yoga, breathwork. The Esalen audience.</li>
+            <li><strong>Seekers</strong> &mdash; burnout, anxiety, transition. Looking to find power within, not be told what to do.</li>
+            <li><strong>Creatives</strong> &mdash; writers, architects. Not a moneymaker, but a powerful testimonial source.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:24px; font-size:14px; color:var(--muted)">The bridge between practitioner and seeker is thin &mdash; many practitioners are also seekers, a few steps ahead, able to lead others.</p>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="dark" id="architecture">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">04 &middot; Entity Architecture</div>
+      <h2 style="color:var(--cream)">Peers, not parent and child.</h2>
+      <p>The Method and the Centre are equals. The Centre is the proving ground; the Method is intellectual property held in a new entity that licenses to practitioners and partners. The Method must outlive its founder &mdash; as Five&nbsp;Rhythms outlived Gabrielle Roth, and Jungian work outlived Jung.</p>
+    </div>
+    <div class="twoent">
+      <div class="ent" style="background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.16); border-top:3px solid var(--coral)">
+        <h4 style="color:var(--gold)">Proving ground</h4>
+        <h3 style="color:var(--cream)">Path to Health Centre</h3>
+        <p style="color:rgba(250,246,236,0.82); font-size:15px; margin-top:8px">Cape Town. Brick-and-mortar. The entry portal that validates the digital &mdash; medical services, dispensary, education, and space rentals, anchored by Dr.&nbsp;Raoul and Dana&nbsp;Smirin.</p>
+      </div>
+      <div class="link" style="color:rgba(250,246,236,0.6)">&harr;</div>
+      <div class="ent" style="background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.16); border-top:3px solid var(--mountain)">
+        <h4 style="color:var(--gold)">The IP</h4>
+        <h3 style="color:var(--cream)">PATH Method</h3>
+        <p style="color:rgba(250,246,236,0.82); font-size:15px; margin-top:8px">Global reach. A new entity holds the IP and licenses it &mdash; professional training, online courses, workshops, and retreats. pathmethod.com carries 14 years of equity worth keeping.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px; font-size:14px; color:rgba(250,246,236,0.7)">Dr.&nbsp;Raoul sits across both as lineage holder and author &mdash; <em style="font-style:italic; color:var(--gold)">The Trauma You Call Normal</em> (Whitefox, Oct 2026) cross-references each without belonging to either.</p>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section id="voice">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">05 &middot; Voice &amp; Messaging</div>
+      <h2>Steady, warm, invitational.</h2>
+      <p>Fifty years of practice gives the right to speak slowly. The voice should do what the clinic does: calm you without losing rigour.</p>
+    </div>
+
+    <div class="row">
+      <div class="label"><span class="n">Attribute 01</span>Steady</div>
+      <div>
+        <p>Not urgent, not trendy, not selling. Confidence without performance &mdash; someone who has seen thousands of patients and doesn&rsquo;t need to convince you. Consistency is what makes people feel safe.</p>
+        <p style="font-size:14px; color:var(--muted)"><strong>Sounds like:</strong> &ldquo;We combine medical care and psychotherapy under one roof, because chronic illness often begins in the psyche.&rdquo;</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label"><span class="n">Attribute 02</span>Warm but precise</div>
+      <div>
+        <p>Medical accuracy, human warmth. No jargon walls, no fluff. <em class="k">Calm</em> rather than soften; <em class="k">welcoming</em> rather than warm. The precision is real &mdash; each remedy hand-compounded for where the patient is presenting now.</p>
+        <p style="font-size:14px; color:var(--muted)"><strong>Sounds like:</strong> &ldquo;Dr.&nbsp;Raoul compounds each remedy by hand from raw botanicals, in the rhythmical tradition of anthroposophic pharmacy.&rdquo;</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label"><span class="n">Attribute 03</span>Invitational</div>
+      <div>
+        <p>The voice extends an invitation, not a claim. It asks you to participate in your own healing &mdash; never prescriptive, never passive. You are not handing over your agency; you are stepping into your own centre, and the doctor meets you there.</p>
+        <p style="font-size:14px; color:var(--muted)"><strong>Sounds like:</strong> &ldquo;Are you willing to meet the part of yourself that already knows how to heal?&rdquo;</p>
+      </div>
+    </div>
+
+    <div class="use-avoid" style="margin-top:44px">
+      <div class="col">
+        <h4>Lean into</h4>
+        <div class="pill-row">
+          <span class="pill">partner</span><span class="pill">co-create</span><span class="pill">integrated</span><span class="pill">whole-person</span><span class="pill">steady</span><span class="pill">precision</span><span class="pill">facilitate</span><span class="pill">calm</span><span class="pill">welcoming</span><span class="pill">agency</span><span class="pill">presence</span><span class="pill">both/and</span><span class="pill">science-based</span>
+        </div>
+      </div>
+      <div class="col">
+        <h4 style="color:var(--rose-deep)">Avoid</h4>
+        <div class="pill-row">
+          <span class="pill no">journey</span><span class="pill no">revolutionary</span><span class="pill no">biohack</span><span class="pill no">ancient wisdom</span><span class="pill no">alternative</span><span class="pill no">cutting-edge</span><span class="pill no">spiritual science</span><span class="pill no">cured</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:40px; gap:28px">
+      <div class="card">
+        <h4>Messaging frame &mdash; Centre</h4>
+        <p>We help people facing complex illness find their path to healing by integrating medical care, psychotherapy, and precision botanical medicine under one roof.</p>
+      </div>
+      <div class="card">
+        <h4>Messaging frame &mdash; Method</h4>
+        <p>We help practitioners and seekers access their own capacity for healing by facilitating a process of co-creation and inner self-discovery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="spectrum-rule"></div>
+
+<!-- VISUAL DIRECTION -->
+<section id="visual">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">06 &middot; Visual Direction &mdash; Convergence</div>
+      <h2>Warm ground, light spectrum.</h2>
+      <p>The brand holds two poles &mdash; the warm, grounded apothecary and the etheric light-spectrum &mdash; in one system. The light lives in Cape Town sunset pigment, not screen rainbow; the warmth keeps it from ever tipping cold.</p>
+    </div>
+
+    <div class="grid2" style="gap:48px; align-items:start; margin-bottom:48px">
+      <div>
+        <h4>The threefold, with a heart</h4>
+        <p style="color:var(--muted); font-size:15px">Raoul&rsquo;s three circles, kept as concept and freed from the stale diagram: three overlapping circles whose edges carve a <strong>heart at the centre</strong> &mdash; the trinity of body, mind, and nature, with care at the core. Where they meet, the overlaps can combine into colour: primary light into infinite potential.</p>
+      </div>
+      <div style="display:grid; place-items:center">
+        <svg width="190" height="170" viewBox="0 0 100 90" aria-hidden="true">
+          <defs>
+            <linearGradient id="tfRose" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F2589B"/><stop offset="100%" stop-color="#FF9248"/></linearGradient>
+            <linearGradient id="tfGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFD24D"/><stop offset="100%" stop-color="#79CF63"/></linearGradient>
+            <linearGradient id="tfBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4DA6FF"/><stop offset="100%" stop-color="#8A5CF0"/></linearGradient>
+            <clipPath id="tfcL"><circle cx="32" cy="31" r="28"/></clipPath>
+            <clipPath id="tfcR"><circle cx="68" cy="31" r="28"/></clipPath>
+            <mask id="tfKnock"><rect x="0" y="0" width="100" height="100" fill="#fff"/><g clip-path="url(#tfcL)"><g clip-path="url(#tfcR)"><path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" fill="#000"/></g></g></mask>
+          </defs>
+          <g mask="url(#tfKnock)">
+            <circle cx="32" cy="31" r="28" fill="url(#tfRose)" fill-opacity="0.92" style="mix-blend-mode: multiply;"/>
+            <circle cx="68" cy="31" r="28" fill="url(#tfBlue)" fill-opacity="0.92" style="mix-blend-mode: multiply;"/>
+            <path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" fill="url(#tfGold)" fill-opacity="0.92" style="mix-blend-mode: multiply;"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <h4>Palette &mdash; warm ground + sunset spectrum</h4>
+    <div class="swatches" style="margin-bottom:44px">
+      <div class="sw"><div class="chip" style="background:#FAF6EC"></div><div class="lab"><b>Cream</b><span>#FAF6EC</span></div></div>
+      <div class="sw"><div class="chip" style="background:#3A3327"></div><div class="lab"><b>Ink</b><span>#3A3327</span></div></div>
+      <div class="sw"><div class="chip" style="background:#6A89A8"></div><div class="lab"><b>Mountain</b><span>#6A89A8</span></div></div>
+      <div class="sw"><div class="chip" style="background:#8FA487"></div><div class="lab"><b>Sage</b><span>#8FA487</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E5B742"></div><div class="lab"><b>Gold</b><span>#E5B742</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C97A52"></div><div class="lab"><b>Coral</b><span>#C97A52</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C9697A"></div><div class="lab"><b>Rose</b><span>#C9697A</span></div></div>
+      <div class="sw"><div class="chip" style="background:#34495E"></div><div class="lab"><b>Mountain deep</b><span>#34495E</span></div></div>
+    </div>
+    <div style="height:6px; border-radius:3px; margin:-24px 0 44px; background:linear-gradient(90deg,#2E73BE,#4F9E4A,#F2A60E,#DE5A2A,#D8345F)"></div>
+
+    <div class="grid3">
+      <div class="card">
+        <h4>Typography</h4>
+        <p style="font-family:var(--serif); font-size:30px; font-weight:400; color:var(--ink); margin-bottom:2px; font-variation-settings:'opsz' 144,'SOFT' 50">Fraunces</p>
+        <p style="font-size:13px">Display serif &mdash; the only face that holds both poles at once: warm and precise. Soft and humane at headline size, crisp and serious as text.</p>
+        <p style="font-family:var(--sans); font-size:17px; font-weight:500; color:var(--ink); margin:14px 0 2px">Inter</p>
+        <p style="font-size:13px">Body &amp; UI &mdash; neutral, highly legible, unfussy alongside Fraunces&rsquo; character.</p>
+      </div>
+      <div class="card">
+        <h4>Imagery</h4>
+        <ul class="clean">
+          <li>Authentic clinic &amp; Cape Town photography &mdash; never stock</li>
+          <li>Never mix real and AI-generated imagery</li>
+          <li>Wood, curved windows, botanicals, real light</li>
+          <li>Warmth <em>and</em> rigour &mdash; the nursing station beside the garden</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>One system, two registers</h4>
+        <p>Same tokens, two leans. The <strong>Centre</strong> dwells warm &mdash; coral, rose, gold, more wood and garden. The <strong>Method</strong> dwells cool and contained &mdash; mountain blue, cream, the spectrum used as a thin band of light.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; padding:28px 32px; background:var(--cream-deep); border-radius:12px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap">
+      <div>
+        <h4 style="margin-bottom:6px">See it live</h4>
+        <p style="color:var(--muted); font-size:15px; margin:0">The convergence homepage mockup applies this system end to end.</p>
+      </div>
+      <a href="visual-direction/mockups/convergence/index.html" style="display:inline-flex; align-items:center; gap:10px; padding:14px 28px; background:var(--ink); color:var(--cream); border-radius:100px; text-decoration:none; font-weight:500; font-size:14px">Open the mockup &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section class="tint" id="status">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">07 &middot; Where We Stand</div>
+      <h2>Settled, and still open.</h2>
+      <p>What the brand has locked, and the decisions still on the table for this team to make.</p>
+    </div>
+    <div class="grid2" style="gap:40px; align-items:start">
+      <div>
+        <h4>Settled</h4>
+        <ul class="clean sage">
+          <li>Names final &mdash; &ldquo;Path to Health&rdquo; (Centre) and &ldquo;PATH Method&rdquo;</li>
+          <li>&ldquo;Centre,&rdquo; not &ldquo;Clinic&rdquo; &middot; canonical domain pathtohealthcenter.com</li>
+          <li>Method &amp; Centre are peers; Method IP in a new entity</li>
+          <li>Move fully off anthroposophic pastels &mdash; no pastels</li>
+          <li>Cape Town context honoured &mdash; present, not colonising</li>
+          <li>Integrative as an <em>extension</em> of medicine, never &ldquo;alternative&rdquo;</li>
+          <li>Logo redesign &amp; trademark filing can proceed</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var(--rose-deep)">Open for the team</h4>
+        <ul class="clean rose">
+          <li>Lock the visual direction &rarr; unblock the design system</li>
+          <li>Illustration: commission, license, or house style</li>
+          <li>Logo audit &mdash; every artifact a logo lives on</li>
+          <li>Entity to hold the Method IP &mdash; legal structure</li>
+          <li>Medical-tourism positioning: aspirational vs. who walks in</li>
+          <li>Book deliverables to Whitefox &mdash; fonts &amp; colour</li>
+          <li>Social handles &amp; the AI-to-human workflow</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="mark" viewBox="0 0 100 90" aria-hidden="true">
+    <circle cx="32" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.2"/>
+    <circle cx="68" cy="31" r="28" fill="none" stroke="var(--ink)" stroke-width="3.2"/>
+    <path d="M 40 28.85 A 28 28 0 1 0 60 28.85 C 58.1 28 56.6 27.8 55 27.8 C 53 27.8 52 29.5 50 31.2 C 48 29.5 47 27.8 45 27.8 C 43.4 27.8 41.9 28 40 28.85 Z" fill="none" stroke="var(--ink)" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>
+  <p><strong style="color:var(--ink)">Path to Health</strong> &mdash; Brand Strategy &middot; June 2026</p>
+  <p>Whole-person medicine, Constantia &middot; Cape Town &middot; Prepared by Interactivism</p>
+</footer>
+
+</body>
+</html>
